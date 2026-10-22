@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Voluntário - Abrigo São Francisco</title>
-    <link rel="stylesheet" href="projects.css">
+    <link rel="stylesheet" href="projects.css" type="text/css">
     <script src="script.js" defer></script>
 </head>
 <body class="creme">
 
-    <!-- NAVBAR (Mantida igual às outras páginas) -->
     <header class="nav-bar">
         <div class="logo-container">
             <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco">
@@ -17,6 +16,11 @@
                 <strong>Abrigo</strong>
                 <span>São Francisco</span>
             </p>
+        </div>
+        <div class="menu-toggle" onclick="document.querySelector('.navegacao').classList.toggle('ativa'); this.classList.toggle('ativa');">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
         <nav class="navegacao">
             <ul class="abas-nav">
@@ -29,7 +33,7 @@
         </nav>
     </header>
 
-    <!-- CONTEÚDO DO CADASTRO -->
+
     <main class="seccao-cadastro">
         
         <div class="cabecalho-cadastro">
@@ -38,15 +42,13 @@
         </div>
 
         <form action="pagina.php" method="POST" class="formulario-cadastro">
-            
-            <!-- BLOCO 1: DADOS PESSOAIS -->
+
             <fieldset class="grupo-campos">
                 <legend>Dados Pessoais</legend>
                 
                 <div class="grid-form">
                     <div class="campo-form col-total">
                         <label for="nome">Nome Completo *</label>
-                        <!-- O placeholder " " vazio é essencial para o CSS :placeholder-shown funcionar na validação -->
                         <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
                     </div>
 
@@ -72,7 +74,7 @@
                 </div>
             </fieldset>
 
-            <!-- BLOCO 2: ENDEREÇO -->
+
             <fieldset class="grupo-campos">
                 <legend>Endereço</legend>
                 
@@ -99,13 +101,13 @@
                             <option value="SP">São Paulo</option>
                             <option value="RJ">Rio de Janeiro</option>
                             <option value="MG">Minas Gerais</option>
-                            <!-- Demais opções... -->
+
                         </select>
                     </div>
                 </div>
             </fieldset>
 
-            <!-- BOTÃO DE ENVIO -->
+
             <div class="container-botao-enviar">
                 <button type="submit" class="btn-enviar-cadastro">FINALIZAR CADASTRO</button>
             </div>
