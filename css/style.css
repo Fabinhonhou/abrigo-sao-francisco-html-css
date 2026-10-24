@@ -45,7 +45,7 @@ body  {
 main  {
     padding-top: 95px;
 }
-
+/*NAVBAR*/
 .nav-bar  {
     width: 100%;
     height: 95px;
@@ -84,6 +84,25 @@ main  {
     font-size: var(--fontsize-p);
     font-weight: 400;
 }
+
+.menu-toggle  {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    cursor: pointer;
+    margin-left: auto;
+}
+.menu-toggle span  {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: var(--cor-texto-escuro);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+}
+
 .navegacao  {
     display: flex;
     align-items: center;
@@ -123,6 +142,8 @@ main  {
     background-color: #a94f2c;
     transform: translateY(-2px);
 }
+/* HERO */
+
 .secao-inicio  {
     height: auto;
     min-height: 0;
@@ -238,6 +259,8 @@ main  {
     height: auto;
     display: block;
 }
+
+/* SEGUNDA SEÇÃO "UMA HISTORIA FEITA DE RECOMEÇOS */
 .secao-abrigo  {
     min-height: 850px;
     padding: 0 0 80px;
@@ -346,6 +369,7 @@ main  {
     font-weight: 700;
     white-space: nowrap;
 }
+/* TERCEIRA SESSÃO "O QUE FAZEMOS */
 .secao-fazemos  {
     width: 100%;
     padding: 80px 5%;
@@ -398,6 +422,8 @@ main  {
     gap: 30px;
     margin-bottom: 40px;
 }
+
+/*CARD 01, CARD02, CARD03  "ACOLHIMENTOS E PROTEÇÃO" - "CUIDADO E RECUPERAÇÃO" - "ADOÇÃO CONSCIENTE" */ 
 .card-fazemos  {
     position: relative;
     height: 480px;
@@ -504,6 +530,8 @@ main  {
 .link-rodape-fazemos:hover  {
     color: #bd5c35;
 }
+
+/* QUARTA SESSÃO "IMPACTO" */
 .secao-impacto  {
     width: 100%;
     padding: 80px 5%;
@@ -568,6 +596,8 @@ main  {
     font-size: var(--fontsize-p);
     font-weight: 500;
 }
+
+/* IMAGEM DA CACHORRA DIANA */
 .cont-impacto-dir  {
     width: 100%;
 }
@@ -625,12 +655,13 @@ main  {
 .link-historia:hover  {
     color: #f0a04b;
 }
-@media (max-width: 1024px)  {
-    .card-historia  {
-        left: 20px;
-        width: calc(100% - 40px);
-    }
+
+.card-historia  {
+    left: 20px;
+    width: calc(100% - 40px);
 }
+
+/* QUINTA SESSÃO "NOSSA RAZÃO" */
 .secao-razao  {
     width: 100%;
     padding: 80px 5%;
@@ -710,15 +741,7 @@ main  {
     border-color: #bd5c35;
     color: #ffffff;
 }
-@media (max-width: 900px)  {
-    .secao-razao  {
-        flex-direction: column;
-        gap: 40px;
-    }
-    .cont-razao-esq, .cont-razao-dir  {
-        width: 100%;
-    }
-}
+/*QUINTA SESSÃO "FAÇA PARTE" */
 .secao-faca-parte  {
     width: 100%;
     padding: 100px 5%;
@@ -833,17 +856,8 @@ main  {
     border-color: #bd5c35;
     color: #ffffff;
 }
-@media (max-width: 950px)  {
-    .secao-faca-parte  {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 50px;
-        padding: 60px 5%;
-    }
-    .cont-parte-esq, .cont-parte-dir  {
-        width: 100%;
-    }
-}
+
+/* SEXTA SESSÃO CARD "EVENTOS" */
 .secao-eventos  {
     width: 100%;
     padding: 60px 5% 20px;
@@ -897,6 +911,8 @@ main  {
 .link-banner:hover  {
     opacity: 0.7;
 }
+
+/* SETIMA SESSÃO "GALERIA" */
 .secao-galeria  {
     width: 100%;
     padding: 60px 5% 100px;
@@ -961,25 +977,8 @@ main  {
 .link-rodape-galeria:hover  {
     color: #bd5c35;
 }
-@media (max-width: 950px)  {
-    .grid-galeria  {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 15px;
-    }
-    .img-galeria  {
-        height: 350px;
-    }
-    .rodape-galeria  {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-    }
-}
-@media (max-width: 600px)  {
-    .grid-galeria  {
-        grid-template-columns: 1fr;
-    }
-}
+
+/* OITAVA SESSÃO "INFORMAÇÃO PRÁTICA" */
 .secao-informacao  {
     width: 100%;
     padding: 80px 5%;
@@ -1049,6 +1048,8 @@ main  {
     font-size: var(--fontsize-p);
     line-height: 1.6;
 }
+
+/* NONA SESSÃO "UM GESTO ABRE CAMINHO" */
 .secao-cta  {
     width: 100%;
     padding: 100px 5%;
@@ -1106,25 +1107,8 @@ main  {
     background-color: #1a1311;
     transform: translateY(-2px);
 }
-@media (max-width: 950px)  {
-    .grid-informacao  {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-    .secao-cta  {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 40px;
-        padding: 60px 5%;
-    }
-    .cta-esq, .cta-dir  {
-        width: 100%;
-        max-width: 100%;
-    }
-    .cta-esq h2  {
-        font-size: var(--fontsize-h2);
-    }
-}
+
+/* FOOTER */
 .rodape-site  {
     width: 100%;
     padding: 80px 5% 30px;
@@ -1232,97 +1216,4 @@ main  {
     justify-content: center;
     margin-left: 10px;
     color: rgba(245, 238, 227, 0.8);
-}
-@media (max-width: 900px)  {
-    .conteudo-rodape  {
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-    }
-    .coluna-marca  {
-        width: 100%;
-    }
-    .colunas-links  {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-between;
-    }
-    .coluna-nav  {
-        width: 45%;
-        margin-bottom: 20px;
-    }
-    .rodape-inferior  {
-        flex-direction: column;
-        gap: 20px;
-        text-align: center;
-    }
-}
-@media (max-width: 500px)  {
-    .coluna-nav  {
-        width: 100%;
-        text-align: center;
-    }
-}
-.menu-toggle  {
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-    cursor: pointer;
-    margin-left: auto;
-}
-.menu-toggle span  {
-    display: block;
-    height: 3px;
-    width: 100%;
-    background-color: var(--cor-texto-escuro);
-    border-radius: 3px;
-    transition: all 0.3s ease;
-}
-@media (max-width: 768px)  {
-    .nav-bar  {
-        padding: 0 20px;
-        justify-content: space-between;
-    }
-    .navegacao  {
-        position: absolute;
-        top: 95px;
-        left: 0;
-        width: 100%;
-        background-color: #F3ECE1;
-        flex-direction: column;
-        padding: 20px 0;
-        gap: 20px;
-        transform: translateY(-150%);
-        opacity: 0;
-        visibility: hidden;
-        transition: all 0.3s ease;
-        box-shadow: 0 10px 15px rgba(0,0,0,0.05);
-    }
-    .navegacao.ativa  {
-        transform: translateY(0);
-        opacity: 1;
-        visibility: visible;
-    }
-    .abas-nav  {
-        flex-direction: column;
-        gap: 20px;
-        width: 100%;
-        text-align: center;
-        margin: 0;
-        padding: 0;
-    }
-    .menu-toggle  {
-        display: flex;
-    }
-    .menu-toggle.ativa span:nth-child(1)  {
-        transform: translateY(9px) rotate(45deg);
-    }
-    .menu-toggle.ativa span:nth-child(2)  {
-        opacity: 0;
-    }
-    .menu-toggle.ativa span:nth-child(3)  {
-        transform: translateY(-9px) rotate(-45deg);
-    }
 }
