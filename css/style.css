@@ -10,17 +10,20 @@
     --cor-sucesso: #10b981;
     --cor-erro: #ef4444;
     --cor-alerta: #f59e0b;
+
     --fonte-familia: 'Nunito', sans-serif;
-    --fonte-sm: 13px;
-    --fonte-md: 15px;
-    --fonte-lg: 20px;
-    --fonte-xl: 32px;
-    --fonte-xxl: 48px;
+    --fontsize-h1: clamp(36px, 24.03px + 3.193vw, 70px);
+    --fontsize-h2: clamp(28px, 18.49px + 2.535vw, 55px);
+    --fontsize-h3: clamp(24px, 18.37px + 1.502vw, 40px);
+    --fontsize-p:  clamp(16px, 14.59px + 0.376vw, 20px);
+    --fontsize-b:  clamp(16px, 14.59px + 0.376vw, 20px);
+
     --espaco-sm: 8px;
     --espaco-md: 16px;
     --espaco-lg: 30px;
     --espaco-xl: 60px;
     --espaco-xxl: 100px;
+    
     --borda-raio-sm: 8px;
     --borda-raio-md: 12px;
     --borda-raio-lg: 30px;
@@ -42,136 +45,7 @@ body  {
 main  {
     padding-top: 95px;
 }
-.modal-overlay  {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(44, 33, 29, 0.85);
-    z-index: 9999;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease, visibility 0.3s ease;
-}
-.modal-overlay.mostrar  {
-    opacity: 1;
-    visibility: visible;
-}
-.modal-conteudo  {
-    position: relative;
-    background-color: #f5eee3;
-    width: 90%;
-    max-width: 850px;
-    border-radius: 30px;
-    padding: 60px 50px;
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-    transform: scale(0.95);
-    transition: transform 0.3s ease;
-}
-.modal-overlay.mostrar .modal-conteudo  {
-    transform: scale(1);
-}
-.modal-fechar  {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    background: none;
-    border: none;
-    color: #292522;
-    cursor: pointer;
-    padding: 5px;
-    border-radius: 50%;
-    transition: background-color 0.2s ease, color 0.2s ease;
-}
-.modal-fechar:hover  {
-    background-color: #bd5c35;
-    color: #ffffff;
-}
-.modal-cabecalho  {
-    text-align: center;
-    margin-bottom: 40px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.modal-cabecalho h2  {
-    color: #292522;
-    font-size: 38px;
-    font-weight: 800;
-    letter-spacing: -1px;
-    margin-bottom: 15px;
-}
-.modal-cabecalho p  {
-    color: #756e68;
-    font-size: 16px;
-    max-width: 500px;
-    margin: 0;
-}
-.modal-opcoes  {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
-}
-.modal-opcao-card  {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(0,0,0,0.05);
-    text-decoration: none;
-    color: #292522;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.modal-opcao-card:hover  {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
-}
-.icone-circulo-modal  {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #f5eee3;
-    color: #bd5c35;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-    transition: background-color 0.3s ease, color 0.3s ease;
-}
-.modal-opcao-card:hover .icone-circulo-modal  {
-    background-color: #bd5c35;
-    color: #ffffff;
-}
-.modal-opcao-card h3  {
-    font-size: 24px;
-    font-weight: 800;
-    margin-bottom: 10px;
-}
-.modal-opcao-card p  {
-    color: #756e68;
-    font-size: 15px;
-    margin-bottom: 25px;
-    flex-grow: 1;
-}
-@media (max-width: 768px)  {
-    .modal-opcoes  {
-        grid-template-columns: 1fr;
-    }
-    .modal-conteudo  {
-        padding: 40px 30px;
-        max-height: 90vh;
-        overflow-y: auto;
-    }
-    .modal-cabecalho h2  {
-        font-size: 28px;
-    }
-}
+
 .nav-bar  {
     width: 100%;
     height: 95px;
@@ -203,11 +77,11 @@ main  {
     line-height: 1.1;
 }
 .escritalogo strong  {
-    font-size: 30px;
+    font-size: var(--fontsize-b);
     font-weight: 800;
 }
 .escritalogo span  {
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     font-weight: 400;
 }
 .navegacao  {
@@ -228,7 +102,7 @@ main  {
 .abas-nav a  {
     color: #292522;
     text-decoration: none;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     white-space: nowrap;
     transition: color 0.3s ease;
@@ -241,7 +115,7 @@ main  {
     color: #ffffff;
     padding: 13px 22px;
     border-radius: 30px;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 600;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -268,7 +142,7 @@ main  {
 .subtitulo-inicio  {
     margin-bottom: 20px;
     color: #B85B35;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
 }
 .subtitulo-inicio span  {
@@ -282,7 +156,7 @@ main  {
 .cont-inicio h1  {
     margin-bottom: 25px;
     color: #292522;
-    font-size: 70px;
+    font-size: var(--fontsize-h1);
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -1px;
@@ -291,7 +165,7 @@ main  {
     max-width: 450px;
     margin-bottom: 30px;
     color: #756e68;
-    font-size: 20px;
+    font-size: var(--fontsize-p);
     line-height: 1.5;
 }
 .botoes-inicio  {
@@ -308,12 +182,12 @@ main  {
     color: #ffffff;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: var(--fontsize-p);
     font-weight: 600;
     transition: 0.3s ease;
 }
 .quem-espera span  {
-    font-size: 15px;
+    font-size: var(--fontsize-p);
 }
 .quem-espera:hover  {
     background-color: #a94f2c;
@@ -325,12 +199,12 @@ main  {
     gap: 9px;
     color: #292522;
     text-decoration: none;
-    font-size: 20px;
+    font-size: var(--fontsize-p);
     font-weight: 600;
     transition: color 0.3s ease;
 }
 .apoie-abrigo span  {
-    font-size: 17px;
+    font-size: var(--fontsize-p);
 }
 .apoie-abrigo:hover  {
     color: #bd5c35;
@@ -342,12 +216,12 @@ main  {
     margin-top: 35px;
     color: #756e68;
     text-decoration: none;
-    font-size: 12px;
+    font-size: var(--fontsize-p);
     font-weight: 600;
 }
 .explorar-cuidado span  {
     color: #bd5c35;
-    font-size: 16px;
+    font-size: var(--fontsize-p);
 }
 .img-scooby  {
     position: relative;
@@ -429,7 +303,7 @@ main  {
     gap: 8px;
     margin-bottom: 18px;
     color: #f0a04b;
-    font-size: 9px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
 }
 .subtitulo-abrigo span  {
@@ -441,7 +315,7 @@ main  {
 .conteudo-abrigo h2  {
     margin-bottom: 20px;
     color: #f5eee3;
-    font-size: 48px;
+    font-size: var(--fontsize-h2);
     font-weight: 700;
     line-height: 1.08;
     letter-spacing: -1px;
@@ -450,7 +324,7 @@ main  {
     max-width: 650px;
     margin: 0 auto;
     color: #c7bbb3;
-    font-size: 14px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .frase-abrigo  {
@@ -468,7 +342,7 @@ main  {
 .frase-abrigo p  {
     margin: 0;
     color: #bd5c35;
-    font-size: 9px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     white-space: nowrap;
 }
@@ -496,7 +370,7 @@ main  {
     gap: 10px;
     margin-bottom: 20px;
     color: #bd5c35;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
 }
 .subtitulo-fazemos span  {
@@ -506,7 +380,7 @@ main  {
 }
 .titulos-fazemos h2  {
     color: #292522;
-    font-size: 44px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -515,7 +389,7 @@ main  {
     width: 40%;
     max-width: 420px;
     color: #756e68;
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .grid-cards-fazemos  {
@@ -580,18 +454,18 @@ main  {
     justify-content: center;
 }
 .numero-card  {
-    font-size: 14px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
 }
 .base-card h3  {
     margin-bottom: 15px;
-    font-size: 26px;
+    font-size: var(--fontsize-h3);
     font-weight: 800;
 }
 .base-card p  {
     margin-bottom: 30px;
     color: #f5eee3;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     line-height: 1.5;
 }
 .link-card  {
@@ -600,7 +474,7 @@ main  {
     gap: 8px;
     color: #ffffff;
     text-decoration: none;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: transform 0.3s ease;
 }
@@ -614,7 +488,7 @@ main  {
 }
 .rodape-fazemos p  {
     color: #292522;
-    font-size: 18px;
+    font-size: var(--fontsize-p);
     font-weight: 800;
 }
 .link-rodape-fazemos  {
@@ -623,7 +497,7 @@ main  {
     gap: 8px;
     color: #292522;
     text-decoration: none;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -649,7 +523,7 @@ main  {
     gap: 10px;
     margin-bottom: 25px;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -660,7 +534,7 @@ main  {
 }
 .cont-impacto-esq h2  {
     margin-bottom: 25px;
-    font-size: 48px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -669,7 +543,7 @@ main  {
     max-width: 450px;
     margin-bottom: 40px;
     color: rgba(255, 255, 255, 0.85);
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .linha-divisoria-impacto  {
@@ -685,13 +559,13 @@ main  {
 }
 .stat-item h3  {
     margin-bottom: 5px;
-    font-size: 32px;
+    font-size: var(--fontsize-h3);
     font-weight: 800;
 }
 .stat-item p  {
     margin: 0;
     color: rgba(255, 255, 255, 0.8);
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 500;
 }
 .cont-impacto-dir  {
@@ -731,20 +605,20 @@ main  {
     gap: 8px;
     margin-bottom: 15px;
     color: #f0a04b;
-    font-size: 11px;
+    font-size: var(--fontsize-p);
     font-weight: 800;
     letter-spacing: 0.5px;
 }
 .card-historia p  {
     margin-bottom: 25px;
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     font-weight: 600;
     line-height: 1.5;
 }
 .link-historia  {
     color: #ffffff;
     text-decoration: none;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -775,7 +649,7 @@ main  {
     gap: 10px;
     margin-bottom: 25px;
     color: #bd5c35;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -786,7 +660,7 @@ main  {
 }
 .cont-razao-esq h2  {
     color: #292522;
-    font-size: 44px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -812,12 +686,12 @@ main  {
 .textos-item-razao h3  {
     margin-bottom: 8px;
     color: #292522;
-    font-size: 24px;
+    font-size: var(--fontsize-h3);
     font-weight: 800;
 }
 .textos-item-razao p  {
     color: #756e68;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 500;
 }
 .icone-seta-razao  {
@@ -863,7 +737,7 @@ main  {
     gap: 10px;
     margin-bottom: 25px;
     color: #f0a04b;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -875,7 +749,7 @@ main  {
 .cont-parte-esq h2  {
     margin-bottom: 25px;
     color: #f5eee3;
-    font-size: 46px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -883,7 +757,7 @@ main  {
 .cont-parte-esq p  {
     margin-bottom: 40px;
     color: rgba(245, 238, 227, 0.7);
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .btn-comecar  {
@@ -895,7 +769,7 @@ main  {
     color: #ffffff;
     border-radius: 30px;
     text-decoration: none;
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -926,7 +800,7 @@ main  {
 .num-parte  {
     width: 50px;
     color: #f0a04b;
-    font-size: 14px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
 }
 .textos-item-parte  {
@@ -935,12 +809,12 @@ main  {
 .textos-item-parte h3  {
     margin-bottom: 6px;
     color: #f5eee3;
-    font-size: 24px;
+    font-size: var(--fontsize-h3);
     font-weight: 700;
 }
 .textos-item-parte p  {
     color: rgba(245, 238, 227, 0.6);
-    font-size: 14px;
+    font-size: var(--fontsize-p);
     font-weight: 500;
 }
 .icone-seta-parte  {
@@ -991,7 +865,7 @@ main  {
     gap: 10px;
     margin-bottom: 25px;
     color: #292522;
-    font-size: 11px;
+    font-size: var(--fontsize-p);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1004,7 +878,7 @@ main  {
 .conteudo-banner h2  {
     max-width: 650px;
     color: #292522;
-    font-size: 42px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -1016,7 +890,7 @@ main  {
     margin-top: 40px;
     color: #292522;
     text-decoration: none;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: opacity 0.3s ease;
 }
@@ -1037,7 +911,7 @@ main  {
     gap: 10px;
     margin-bottom: 20px;
     color: #bd5c35;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -1048,7 +922,7 @@ main  {
 }
 .header-galeria h2  {
     color: #292522;
-    font-size: 44px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -1071,7 +945,7 @@ main  {
 }
 .rodape-galeria p  {
     color: #292522;
-    font-size: 20px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
 }
 .link-rodape-galeria  {
@@ -1080,7 +954,7 @@ main  {
     gap: 8px;
     color: #292522;
     text-decoration: none;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: color 0.3s ease;
 }
@@ -1120,7 +994,7 @@ main  {
     gap: 10px;
     margin-bottom: 20px;
     color: #bd5c35;
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -1131,7 +1005,7 @@ main  {
 }
 .header-informacao h2  {
     color: #292522;
-    font-size: 44px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -1167,12 +1041,12 @@ main  {
 .card-info h3  {
     margin-bottom: 12px;
     color: #292522;
-    font-size: 24px;
+    font-size: var(--fontsize-h3);
     font-weight: 800;
 }
 .card-info p  {
     color: #756e68;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .secao-cta  {
@@ -1190,14 +1064,14 @@ main  {
 .subtitulo-cta  {
     margin-bottom: 20px;
     color: rgba(255, 255, 255, 0.9);
-    font-size: 11px;
+    font-size: var(--fontsize-p);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
 .cta-esq h2  {
     color: #f5eee3;
-    font-size: 54px;
+    font-size: var(--fontsize-h2);
     font-weight: 800;
     line-height: 1.1;
     letter-spacing: -1px;
@@ -1212,7 +1086,7 @@ main  {
 .cta-dir p  {
     margin-bottom: 30px;
     color: rgba(245, 238, 227, 0.85);
-    font-size: 16px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .btn-apoiar  {
@@ -1224,7 +1098,7 @@ main  {
     color: #ffffff;
     border-radius: 40px;
     text-decoration: none;
-    font-size: 15px;
+    font-size: var(--fontsize-p);
     font-weight: 700;
     transition: background-color 0.3s ease, transform 0.3s ease;
 }
@@ -1248,7 +1122,7 @@ main  {
         max-width: 100%;
     }
     .cta-esq h2  {
-        font-size: 40px;
+        font-size: var(--fontsize-h2);
     }
 }
 .rodape-site  {
@@ -1276,17 +1150,17 @@ main  {
 .coluna-marca h3  {
     margin-bottom: 15px;
     color: #ffffff;
-    font-size: 22px;
+    font-size: var(--fontsize-h3);
     font-weight: 800;
     line-height: 1.2;
 }
 .coluna-marca h3 span  {
-    font-size: 14px;
+    font-size: var(--fontsize-h3);
     font-weight: 600;
 }
 .coluna-marca p  {
     color: rgba(245, 238, 227, 0.7);
-    font-size: 13px;
+    font-size: var(--fontsize-p);
     line-height: 1.6;
 }
 .colunas-links  {
@@ -1298,7 +1172,7 @@ main  {
 .coluna-nav h4  {
     margin-bottom: 25px;
     color: #f0a04b;
-    font-size: 11px;
+    font-size: var(--fontsize-p);
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 0.5px;
@@ -1314,7 +1188,7 @@ main  {
 .coluna-nav a  {
     color: rgba(245, 238, 227, 0.85);
     text-decoration: none;
-    font-size: 14px;
+    font-size: var(--fontsize-p);
     font-weight: 500;
     transition: color 0.3s ease;
 }
@@ -1334,7 +1208,7 @@ main  {
 }
 .rodape-inferior p  {
     color: rgba(245, 238, 227, 0.6);
-    font-size: 12px;
+    font-size: var(--fontsize-p);
     font-weight: 500;
 }
 .links-inferiores  {
@@ -1345,7 +1219,7 @@ main  {
 .links-inferiores a  {
     color: rgba(245, 238, 227, 0.6);
     text-decoration: none;
-    font-size: 12px;
+    font-size: var(--fontsize-p);
     font-weight: 500;
     transition: color 0.3s ease;
 }
