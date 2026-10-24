@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,22 @@
     <link rel="stylesheet" href="projects.css" type="text/css">
     <script src="script.js"></script>
 </head>
+
 <body>
+    <!--NAVBAR-->
     <header class="nav-bar">
-
         <div class="logo-container">
-                <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco">
+            <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco" width="50"
+                height="50" loading="eager">
 
-                <p class="escritalogo">
-                    <strong>Abrigo</strong>
-                    <span>São Francisco</span>
-                </p>
+            <p class="escritalogo">
+                <strong>Abrigo</strong>
+                <span>São Francisco</span>
+            </p>
         </div>
-        
-        <div class="menu-toggle" onclick="document.querySelector('.navegacao').classList.toggle('ativa'); this.classList.toggle('ativa');">
+
+        <div class="menu-toggle"
+            onclick="document.querySelector('.navegacao').classList.toggle('ativa'); this.classList.toggle('ativa');">
             <span></span>
             <span></span>
             <span></span>
@@ -37,668 +41,803 @@
 
     </header>
 
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal-ajuda">
+        <div class="modal-conteudo">
 
-<div class="modal-overlay" id="modal-ajuda">
-    <div class="modal-conteudo">
-        
-        <button class="modal-fechar" id="fechar-modal" aria-label="Fechar">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
-        </button>
+            <button class="modal-fechar" id="fechar-modal" aria-label="Fechar">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
 
-        <div class="modal-cabecalho">
-            <div class="subtitulo-padrao subtitulo-laranja">
-                <span></span> FAÇA A DIFERENÇA
-            </div>
-            <h2>Como você gostaria de ajudar?</h2>
-            <p>Escolha uma das opções abaixo para ser direcionado à área correspondente.</p>
-        </div>
-        
-        <div class="modal-opcoes">
-
-            <a href="projects.html" class="modal-opcao-card">
-                <div class="icone-circulo-modal">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+            <div class="modal-cabecalho">
+                <div class="subtitulo-padrao subtitulo-laranja">
+                    <span></span> FAÇA A DIFERENÇA
                 </div>
-                <h3>Ser Voluntário</h3>
-                <p>Doe seu tempo e habilidades para apoiar as nossas causas e atividades diárias.</p>
-                <span class="link-laranja-fino">Quero ser voluntário &rarr;</span>
+                <h2>Como você gostaria de ajudar?</h2>
+                <p>Escolha uma das opções abaixo para ser direcionado à área correspondente.</p>
+            </div>
+
+            <div class="modal-opcoes">
+
+                <a href="projects.html" class="modal-opcao-card">
+                    <div class="icone-circulo-modal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        </svg>
+                    </div>
+                    <h3>Ser Voluntário</h3>
+                    <p>Doe seu tempo e habilidades para apoiar as nossas causas e atividades diárias.</p>
+                    <span class="link-laranja-fino">Quero ser voluntário &rarr;</span>
+                </a>
+
+                <a href="projects.html#doacoes" class="modal-opcao-card">
+                    <div class="icone-circulo-modal">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
+                            </path>
+                        </svg>
+                    </div>
+                    <h3>Fazer uma Doação</h3>
+                    <p>Contribua financeiramente para sustentar o abrigo e as campanhas ativas.</p>
+                    <span class="link-laranja-fino">Quero doar &rarr;</span>
+                </a>
+
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!--PRIMEIRA SESSÃO - HERO -->
+        <section class="hero-topo">
+
+            <div class="hero-texto-coluna">
+                <div class="hero-etiqueta">
+                    <span class="traco"></span> PROJETOS SOCIAIS
+                </div>
+                <h1>Encontre uma<br>forma de participar</h1>
+                <p>Existem diferentes maneiras de contribuir com o trabalho do Abrigo São Francisco. Nesta página, você
+                    pode encontrar oportunidades de voluntariado, acompanhar campanhas, realizar uma doação e consultar
+                    os resultados das ações.</p>
+
+                <div class="hero-botoes">
+                    <a href="#voluntariado" class="btn-laranja-hero">Quero ser voluntário &nearr;</a>
+                    <a href="#campanhas" class="btn-texto-hero">Ver campanhas ♡</a>
+                </div>
+            </div>
+
+
+            <div class="hero-imagem-coluna">
+                <img src="imagens/dog_projects.png" alt="Pessoa segurando um filhote de cachorro" height="700"
+                    width="538" loading="eager">
+            </div>
+
+        </section>
+        <!--SEGUNDA SESSÃO "ENCONTRE A FORMA QUE COMBINA COM VOCÊ"-->
+        <section class="seccao-opcoes-bg">
+            <div class="overlay-imagem-fundo" style="background-image: url('imagens/dog_cards_laranja.jpeg');"></div>
+
+            <div class="conteudo-opcoes">
+                <div class="cabecalho-opcoes">
+                    <div class="texto-central-container">
+                        <div class="subtitulo-padrao subtitulo-branco-centro">
+                            <span class="traco-branco"></span> ENCONTRE A FORMA QUE COMBINA COM VOCÊ
+                        </div>
+                        <h2>Escolha como deseja contribuir e acompanhe as oportunidades e iniciativas disponíveis.</h2>
+                        <div class="tagline-direita">ACOLHER &middot; PROTEGER &middot; TRANSFORMAR</div>
+                    </div>
+                </div>
+                <!--CARD VOLUNTARIADO-->
+                <div class="grid-cards-opcoes">
+                    <div class="card-opcao-outline">
+                        <div class="card-numero"><span class="traco-curto"></span> 01</div>
+                        <h3>VOLUNTARIADO</h3>
+                        <p>Encontre oportunidades abertas e participe de ações de acordo com sua disponibilidade e
+                            possibilidades de contribuição.</p>
+                        <a href="#voluntariado" class="btn-branco-card">Ver oportunidades &nearr;</a>
+                    </div>
+
+                    <!--CARD DOAÇÕES-->
+                    <div class="card-opcao-outline">
+                        <div class="card-numero"><span class="traco-curto"></span> 02</div>
+                        <h3>DOAÇÕES</h3>
+                        <p>Apoie uma campanha ou faça uma contribuição para ajudar nas necessidades do Abrigo.</p>
+                        <a href="#doacoes" class="btn-branco-card">Ver campanhas ♡</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!--TERCEIRA SESSÃO "OPORTUNIDADES DE VOLUNTARIADO"-->
+        <section class="seccao-oportunidades" id="oportunidades">
+            <div class="cabecalho-padrao">
+                <div class="subtitulo-padrao subtitulo-laranja">
+                    <span></span> OPORTUNIDADES DE VOLUNTARIADO
+                </div>
+                <h2>Atividades nas quais você pode contribuir com seu tempo, conhecimento ou habilidades.</h2>
+                <p>As oportunidades disponíveis apresentam as informações necessárias para que você conheça a atividade
+                    antes de realizar sua inscrição.</p>
+            </div>
+            <!--CARD01 "ACOLHIMENTO E PROTEÇÃO"-->
+            <div class="grid-cards-3">
+
+                <div class="card-imagem bg-img-voluntariado-1">
+                    <div class="overlay-gradiente-laranja"></div>
+                    <div class="conteudo-card-img">
+                        <div class="topo-card">
+                            <div class="icone-bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg></div>
+                            <span class="num">01</span>
+                        </div>
+                        <div class="base-card">
+                            <h3>Acolhimento e proteção</h3>
+                            <p>Um lugar seguro, rotina estável e atenção individual desde o primeiro dia.</p>
+                            <span class="link-seta">Saiba mais &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD02 "CUIDADO E RECUPERAÇÃO"-->
+                <div class="card-imagem bg-img-voluntariado-2">
+                    <div class="overlay-gradiente-laranja"></div>
+                    <div class="conteudo-card-img">
+                        <div class="topo-card">
+                            <div class="icone-bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14" />
+                                </svg></div>
+                            <span class="num">02</span>
+                        </div>
+                        <div class="base-card">
+                            <h3>Cuidado e recuperação</h3>
+                            <p>Bem-estar, socialização e acompanhamento responsável para recuperar corpo e confiança.
+                            </p>
+                            <span class="link-seta">Saiba mais &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+                <!--CARD03 "ADOÇÃO CONSCIENTE"-->
+                <div class="card-imagem bg-img-voluntariado-3">
+                    <div class="overlay-gradiente-laranja"></div>
+                    <div class="conteudo-card-img">
+                        <div class="topo-card">
+                            <div class="icone-bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                                </svg></div>
+                            <span class="num">03</span>
+                        </div>
+                        <div class="base-card">
+                            <h3>Adoção consciente</h3>
+                            <p>Encontros cuidadosos e orientação para construir vínculos que durem uma vida inteira.</p>
+                            <span class="link-seta">Saiba mais &rarr;</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="alinhamento-direita">
+                <a href="#" class="btn-link">Veja como participar &rarr;</a>
+            </div>
+            <!--CAD "OPORTUNIDADE DE VOLUNTARIADO"-->
+            <a href="#" class="banner-oportunidade-larga">
+                <div class="subtitulo-pequeno"><span></span> OPORTUNIDADE DE VOLUNTARIADO</div>
+                <h3>[Nome da oportunidade]</h3>
+                <div class="info-oportunidade">
+                    <div>
+                        <p>Área:</p>
+                        <p>Local:</p>
+                    </div>
+                    <div>
+                        <p>Disponibilidade: [Dias/horários]</p>
+                        <p>[Descrição breve da oportunidade]</p>
+                    </div>
+                </div>
+                <span class="link-canto">Ver oportunidade &nearr;</span>
             </a>
+        </section>
 
-            <a href="projects.html#doacoes" class="modal-opcao-card">
-                <div class="icone-circulo-modal">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+        <!--QUARTA SESSÃO "FAÇA SUA PARTE"-->
+        <section class="seccao-como-participar-fixa">
+
+
+            <div class="coluna-esq-participar">
+                <div class="subtitulo-padrao subtitulo-laranja">
+                    <span></span> FAÇA PARTE
                 </div>
-                <h3>Fazer uma Doação</h3>
-                <p>Contribua financeiramente para sustentar o abrigo e as campanhas ativas.</p>
-                <span class="link-laranja-fino">Quero doar &rarr;</span>
-            </a>
 
-        </div>
-    </div>
-</div>
+                <h2>COMO PARTICIPAR DO VOLUNTARIADO</h2>
 
-<main>
+                <p>O processo foi organizado em etapas para que você possa conhecer a oportunidade, demonstrar seu
+                    interesse e acompanhar sua participação.</p>
 
-<section class="hero-topo">
-    
-    <div class="hero-texto-coluna">
-        <div class="hero-etiqueta">
-            <span class="traco"></span> PROJETOS SOCIAIS
-        </div>
-        <h1>Encontre uma<br>forma de participar</h1>
-        <p>Existem diferentes maneiras de contribuir com o trabalho do Abrigo São Francisco. Nesta página, você pode encontrar oportunidades de voluntariado, acompanhar campanhas, realizar uma doação e consultar os resultados das ações.</p>
-        
-        <div class="hero-botoes">
-            <a href="#voluntariado" class="btn-laranja-hero">Quero ser voluntário &nearr;</a>
-            <a href="#campanhas" class="btn-texto-hero">Ver campanhas ♡</a>
-        </div>
-    </div>
+                <a href="#" class="btn-laranja-solido">Ver oportunidade &rarr;</a>
+            </div>
 
 
-    <div class="hero-imagem-coluna">
-        <img src="imagens/dog_projects.png" alt="Pessoa segurando um filhote de cachorro">
-    </div>
-
-</section>
-
-<section class="seccao-opcoes-bg">
-    <div class="overlay-imagem-fundo" style="background-image: url('imagens/dog_cards_laranja.jpeg');"></div>
-    
-    <div class="conteudo-opcoes">
-        <div class="cabecalho-opcoes">
-            <div class="texto-central-container">
-                <div class="subtitulo-padrao subtitulo-branco-centro">
-                    <span class="traco-branco"></span> ENCONTRE A FORMA QUE COMBINA COM VOCÊ
+            <div class="coluna-dir-participar">
+                <div class="item-passo-voluntariado">
+                    <span class="num-passo">01</span>
+                    <div class="textos-passo">
+                        <h3>Encontre</h3>
+                        <p>Consulte as oportunidades disponíveis e escolha aquela que mais combina com você.</p>
+                    </div>
+                    <div class="icone-seta-descer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
                 </div>
-                <h2>Escolha como deseja contribuir e acompanhe as oportunidades e iniciativas disponíveis.</h2>
-                <div class="tagline-direita">ACOLHER &middot; PROTEGER &middot; TRANSFORMAR</div>
-            </div>
-        </div>
-
-        <div class="grid-cards-opcoes">
-            
-
-            <div class="card-opcao-outline">
-                <div class="card-numero"><span class="traco-curto"></span> 01</div>
-                <h3>VOLUNTARIADO</h3>
-                <p>Encontre oportunidades abertas e participe de ações de acordo com sua disponibilidade e possibilidades de contribuição.</p>
-                <a href="#voluntariado" class="btn-branco-card">Ver oportunidades &nearr;</a>
-            </div>
 
 
-            <div class="card-opcao-outline">
-                <div class="card-numero"><span class="traco-curto"></span> 02</div>
-                <h3>DOAÇÕES</h3>
-                <p>Apoie uma campanha ou faça uma contribuição para ajudar nas necessidades do Abrigo.</p>
-                <a href="#doacoes" class="btn-branco-card">Ver campanhas ♡</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-
-<section class="seccao-oportunidades" id="oportunidades">
-    <div class="cabecalho-padrao">
-        <div class="subtitulo-padrao subtitulo-laranja">
-            <span></span> OPORTUNIDADES DE VOLUNTARIADO
-        </div>
-        <h2>Atividades nas quais você pode contribuir com seu tempo, conhecimento ou habilidades.</h2>
-        <p>As oportunidades disponíveis apresentam as informações necessárias para que você conheça a atividade antes de realizar sua inscrição.</p>
-    </div>
-
-    <div class="grid-cards-3">
-
-        <div class="card-imagem bg-img-voluntariado-1">
-            <div class="overlay-gradiente-laranja"></div>
-            <div class="conteudo-card-img">
-                <div class="topo-card">
-                    <div class="icone-bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
-                    <span class="num">01</span>
+                <div class="item-passo-voluntariado">
+                    <span class="num-passo">02</span>
+                    <div class="textos-passo">
+                        <h3>Inscreva-se</h3>
+                        <p>Preencha sua inscrição e envie seus dados para a oportunidade escolhida.</p>
+                    </div>
+                    <div class="icone-seta-descer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
                 </div>
-                <div class="base-card">
-                    <h3>Acolhimento e proteção</h3>
-                    <p>Um lugar seguro, rotina estável e atenção individual desde o primeiro dia.</p>
-                    <span class="link-seta">Saiba mais &rarr;</span>
+
+
+                <div class="item-passo-voluntariado">
+                    <span class="num-passo">03</span>
+                    <div class="textos-passo">
+                        <h3>Seleção</h3>
+                        <p>As inscrições são analisadas de acordo com as características e necessidades de cada
+                            oportunidade.</p>
+                    </div>
+                    <div class="icone-seta-descer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card-imagem bg-img-voluntariado-2">
-            <div class="overlay-gradiente-laranja"></div>
-            <div class="conteudo-card-img">
-                <div class="topo-card">
-                    <div class="icone-bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M2 12h20M4.93 4.93l14.14 14.14M4.93 19.07l14.14-14.14"/></svg></div>
-                    <span class="num">02</span>
+
+                <div class="item-passo-voluntariado">
+                    <span class="num-passo">04</span>
+                    <div class="textos-passo">
+                        <h3>Participe</h3>
+                        <p>Após a seleção, você recebe as orientações necessárias para participar da atividade.</p>
+                    </div>
+                    <div class="icone-seta-descer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
                 </div>
-                <div class="base-card">
-                    <h3>Cuidado e recuperação</h3>
-                    <p>Bem-estar, socialização e acompanhamento responsável para recuperar corpo e confiança.</p>
-                    <span class="link-seta">Saiba mais &rarr;</span>
+
+
+                <div class="item-passo-voluntariado">
+                    <span class="num-passo">05</span>
+                    <div class="textos-passo">
+                        <h3>Acompanhe</h3>
+                        <p>Consulte seu histórico de participação e acompanhe sua jornada como voluntário.</p>
+                    </div>
+                    <div class="icone-seta-descer">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="12" y1="5" x2="12" y2="19"></line>
+                            <polyline points="19 12 12 19 5 12"></polyline>
+                        </svg>
+                    </div>
                 </div>
-            </div>
-        </div>
 
-        <div class="card-imagem bg-img-voluntariado-3">
-            <div class="overlay-gradiente-laranja"></div>
-            <div class="conteudo-card-img">
-                <div class="topo-card">
-                    <div class="icone-bola"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
-                    <span class="num">03</span>
+            </div>
+        </section>
+
+        <!--QUINTA SESSÃO "AREA DO VOLUNTARIO"-->
+        <section class="seccao-area-voluntario creme">
+
+            <div class="cabecalho-padrao">
+                <div class="subtitulo-padrao subtitulo-laranja"><span></span> ÁREA DO VOLUNTÁRIO</div>
+                <h2>Sua participação em um só lugar.</h2>
+                <p>A área do voluntário reúne informações sobre sua participação e permite acompanhar sua jornada dentro
+                    dos projetos.</p>
+            </div>
+
+            <div class="layout-duas-colunas-voluntario">
+                <div class="imagem-laptop-voluntario">
+                    <img src="imagens/pc_voluntariado.jpeg"
+                        alt="Plataforma da Área do Voluntário exibida num ecrã de computador" width="746" height="514"
+                        loading="lazy">
                 </div>
-                <div class="base-card">
-                    <h3>Adoção consciente</h3>
-                    <p>Encontros cuidadosos e orientação para construir vínculos que durem uma vida inteira.</p>
-                    <span class="link-seta">Saiba mais &rarr;</span>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="alinhamento-direita">
-        <a href="#" class="btn-link">Veja como participar &rarr;</a>
-    </div>
 
 
-    <a href="#" class="banner-oportunidade-larga">
-        <div class="subtitulo-pequeno"><span></span> OPORTUNIDADE DE VOLUNTARIADO</div>
-        <h3>[Nome da oportunidade]</h3>
-        <div class="info-oportunidade">
-            <div><p>Área:</p><p>Local:</p></div>
-            <div><p>Disponibilidade: [Dias/horários]</p><p>[Descrição breve da oportunidade]</p></div>
-        </div>
-        <span class="link-canto">Ver oportunidade &nearr;</span>
-    </a>
-</section>
+                <div class="lista-recursos-voluntario">
+
+                    <div class="recurso-item">
+                        <div class="recurso-cabecalho">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                            </svg>
+                            Meu histórico
+                        </div>
+                        <p class="recurso-texto">Consulte as atividades e participações realizadas.</p>
+                    </div>
+
+                    <div class="recurso-item">
+                        <div class="recurso-cabecalho">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            Minhas inscrições
+                        </div>
+                        <p class="recurso-texto">Acompanhe as oportunidades nas quais você demonstrou interesse.</p>
+                    </div>
+
+                    <div class="recurso-item">
+                        <div class="recurso-cabecalho">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                            </svg>
+                            Minhas participações
+                        </div>
+                        <p class="recurso-texto">Visualize as atividades das quais participou.</p>
+                    </div>
+
+                    <div class="recurso-item">
+                        <div class="recurso-cabecalho">
+                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="8" r="7"></circle>
+                                <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+                            </svg>
+                            Meus certificados
+                        </div>
+                        <p class="recurso-texto">Acesse seus certificados digitais de participação.</p>
+                    </div>
 
 
-<section class="seccao-como-participar-fixa">
-    
+                    <div style="margin-top: 15px;">
+                        <a href="#" class="btn-laranja-solido">Acessar área do voluntário &nearr;</a>
+                    </div>
 
-    <div class="coluna-esq-participar">
-        <div class="subtitulo-padrao subtitulo-laranja">
-            <span></span> FAÇA PARTE
-        </div>
-        
-        <h2>COMO PARTICIPAR DO VOLUNTARIADO</h2>
-        
-        <p>O processo foi organizado em etapas para que você possa conhecer a oportunidade, demonstrar seu interesse e acompanhar sua participação.</p>
-        
-        <a href="#" class="btn-laranja-solido">Ver oportunidade &rarr;</a>
-    </div>
-
-
-    <div class="coluna-dir-participar">
-        <div class="item-passo-voluntariado">
-            <span class="num-passo">01</span>
-            <div class="textos-passo">
-                <h3>Encontre</h3>
-                <p>Consulte as oportunidades disponíveis e escolha aquela que mais combina com você.</p>
-            </div>
-            <div class="icone-seta-descer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-            </div>
-        </div>
-
-
-        <div class="item-passo-voluntariado">
-            <span class="num-passo">02</span>
-            <div class="textos-passo">
-                <h3>Inscreva-se</h3>
-                <p>Preencha sua inscrição e envie seus dados para a oportunidade escolhida.</p>
-            </div>
-            <div class="icone-seta-descer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-            </div>
-        </div>
-
-
-        <div class="item-passo-voluntariado">
-            <span class="num-passo">03</span>
-            <div class="textos-passo">
-                <h3>Seleção</h3>
-                <p>As inscrições são analisadas de acordo com as características e necessidades de cada oportunidade.</p>
-            </div>
-            <div class="icone-seta-descer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-            </div>
-        </div>
-
-
-        <div class="item-passo-voluntariado">
-            <span class="num-passo">04</span>
-            <div class="textos-passo">
-                <h3>Participe</h3>
-                <p>Após a seleção, você recebe as orientações necessárias para participar da atividade.</p>
-            </div>
-            <div class="icone-seta-descer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-            </div>
-        </div>
-
-  
-        <div class="item-passo-voluntariado">
-            <span class="num-passo">05</span>
-            <div class="textos-passo">
-                <h3>Acompanhe</h3>
-                <p>Consulte seu histórico de participação e acompanhe sua jornada como voluntário.</p>
-            </div>
-            <div class="icone-seta-descer">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
-            </div>
-        </div>
-
-    </div>
-</section>
-
-
-<section class="seccao-area-voluntario creme">
-    
-    <div class="cabecalho-padrao">
-        <div class="subtitulo-padrao subtitulo-laranja"><span></span> ÁREA DO VOLUNTÁRIO</div>
-        <h2>Sua participação em um só lugar.</h2>
-        <p>A área do voluntário reúne informações sobre sua participação e permite acompanhar sua jornada dentro dos projetos.</p>
-    </div>
-
-    <div class="layout-duas-colunas-voluntario">
-        <div class="imagem-laptop-voluntario">
-            <img src="imagens/pc_voluntariado.jpeg" alt="Plataforma da Área do Voluntário exibida num ecrã de computador">
-        </div>
-
-   
-        <div class="lista-recursos-voluntario">
-            
-            <div class="recurso-item">
-                <div class="recurso-cabecalho">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                    Meu histórico
-                </div>
-                <p class="recurso-texto">Consulte as atividades e participações realizadas.</p>
-            </div>
-            
-            <div class="recurso-item">
-                <div class="recurso-cabecalho">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
-                    Minhas inscrições
-                </div>
-                <p class="recurso-texto">Acompanhe as oportunidades nas quais você demonstrou interesse.</p>
-            </div>
-            
-            <div class="recurso-item">
-                <div class="recurso-cabecalho">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
-                    Minhas participações
-                </div>
-                <p class="recurso-texto">Visualize as atividades das quais participou.</p>
-            </div>
-            
-            <div class="recurso-item">
-                <div class="recurso-cabecalho">
-                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
-                    Meus certificados
-                </div>
-                <p class="recurso-texto">Acesse seus certificados digitais de participação.</p>
-            </div>
-
-    
-            <div style="margin-top: 15px;">
-                <a href="#" class="btn-laranja-solido">Acessar área do voluntário &nearr;</a>
-            </div>
-            
-        </div>
-    </div>
-
-  
-    <div class="rodape-cta-voluntario">
-        <h4>Ainda não é voluntário?</h4>
-        <p>Conheça as oportunidades disponíveis e encontre uma forma de participar.</p>
-        <a href="#voluntariado" class="btn-link">Quero ser voluntário &nearr;</a>
-    </div>
-
-</section>
-
-
-<section class="seccao-certificados creme">
-
-    <div class="cabecalho-certificados">
-        <div class="subtitulo-padrao subtitulo-laranja">
-            <span class="traco"></span> CERTIFICADOS DIGITAIS
-        </div>
-        <h2>Registre cada etapa da sua participação.</h2>
-        <p>Os certificados digitais de participação ficam disponíveis na área do voluntário, permitindo que você acompanhe e consulte os registros relacionados às atividades realizadas.</p>
-    </div>
-
-
-    <div class="conteudo-certificados">
-        <div class="imagem-certificado">
-           
-            <img src="imagens/certificado_mockup.png" alt="Certificado digital de Ana Oliveira">
-        </div>
-        <div class="botao-certificado">
-            <a href="#" class="btn-laranja-solido">Acessar meus certificados &nearr;</a>
-        </div>
-    </div>
-
-</section>
-
-
-<section class="seccao-campanhas escuro" id="campanhas">
-    <div class="cabecalho-padrao">
-        <div class="subtitulo-padrao subtitulo-laranja"><span></span> CAMPANHAS DE ARRECADAÇÃO</div>
-        <h2 class="texto-branco">Campanhas em andamento</h2>
-        <p class="texto-cinza-claro">Acompanhe as campanhas disponíveis, conheça seus objetivos e veja como contribuir. Cada campanha apresenta sua meta e seu progresso para que você possa acompanhar sua evolução.</p>
-    </div>
-
-    <div class="grid-cards-2">
-
-        <div class="card-campanha">
-            <div class="img-campanha bg-camp-1"></div>
-            <div class="conteudo-campanha">
-                <h4>Alimentação e cuidado diário</h4>
-                <p>Arrecadação para manter a rotina de alimentação, higiene e atenção médica dos animais abrigados.</p>
-                <div class="stats-campanha">
-                    <div class="linha-stat"><span>Meta</span> <strong>R$ 12.500</strong></div>
-                    <div class="linha-stat"><span>Arrecadado</span> <strong>R$ 8.420</strong></div>
-                    <div class="linha-stat"><span>Progresso</span> <strong>67%</strong></div>
-                    <progress value="67" max="100"></progress>
-                </div>
-                <div class="botoes-campanha">
-                    <a href="#" class="btn-laranja-solido">Ver campanha &nearr;</a>
-                    <button class="btn-creme">Contribuir &hearts;</button>
                 </div>
             </div>
-        </div>
 
-        <div class="card-campanha">
-            <div class="img-campanha bg-camp-2"></div>
-            <div class="conteudo-campanha">
-                <h4>Saúde e atendimento veterinário</h4>
-                <p>Campanha para exames, medicamentos e procedimentos veterinários essenciais para os animais.</p>
-                <div class="stats-campanha">
-                    <div class="linha-stat"><span>Meta</span> <strong>R$ 9.800</strong></div>
-                    <div class="linha-stat"><span>Arrecadado</span> <strong>R$ 5.990</strong></div>
-                    <div class="linha-stat"><span>Progresso</span> <strong>61%</strong></div>
-                    <progress value="61" max="100"></progress>
+
+            <div class="rodape-cta-voluntario">
+                <b class="titulo-voluntario">Ainda não é voluntário?</b>
+                <p>Conheça as oportunidades disponíveis e encontre uma forma de participar.</p>
+                <a href="#voluntariado" class="btn-link">Quero ser voluntário &nearr;</a>
+            </div>
+
+        </section>
+
+        <!--SEXTA SESSÃO "CERTIFICADOS DIGITAIS"-->
+        <section class="seccao-certificados creme">
+
+            <div class="cabecalho-certificados">
+                <div class="subtitulo-padrao subtitulo-laranja">
+                    <span class="traco"></span> CERTIFICADOS DIGITAIS
                 </div>
-                <div class="botoes-campanha">
-                    <a href="#" class="btn-laranja-solido">Ver campanha &nearr;</a>
-                    <button class="btn-creme">Contribuir &hearts;</button>
+                <h2>Registre cada etapa da sua participação.</h2>
+                <p>Os certificados digitais de participação ficam disponíveis na área do voluntário, permitindo que você
+                    acompanhe e consulte os registros relacionados às atividades realizadas.</p>
+            </div>
+
+
+            <div class="conteudo-certificados">
+                <div class="imagem-certificado">
+
+                    <img src="imagens/certificado_mockup.png" alt="Certificado digital de Ana Oliveira">
+                </div>
+                <div class="botao-certificado">
+                    <a href="#" class="btn-laranja-solido">Acessar meus certificados &nearr;</a>
                 </div>
             </div>
+
+        </section>
+
+        <!--SETIMA SESSÃO "CAMPANHA EM ANDAMENTO"-->
+        <section class="seccao-campanhas escuro" id="campanhas">
+            <div class="cabecalho-padrao">
+                <div class="subtitulo-padrao subtitulo-laranja"><span></span> CAMPANHAS DE ARRECADAÇÃO</div>
+                <h2 class="texto-branco">Campanhas em andamento</h2>
+                <p class="texto-cinza-claro">Acompanhe as campanhas disponíveis, conheça seus objetivos e veja como
+                    contribuir. Cada campanha apresenta sua meta e seu progresso para que você possa acompanhar sua
+                    evolução.</p>
+            </div>
+
+            <div class="grid-cards-2">
+
+                <div class="card-campanha">
+                    <div class="img-campanha bg-camp-1"></div>
+                    <div class="conteudo-campanha">
+                        <b class="titulo-campanha">Alimentação e cuidado diário</b>
+                        <p>Arrecadação para manter a rotina de alimentação, higiene e atenção médica dos animais
+                            abrigados.</p>
+                        <div class="stats-campanha">
+                            <div class="linha-stat"><span>Meta</span> <strong>R$ 12.500</strong></div>
+                            <div class="linha-stat"><span>Arrecadado</span> <strong>R$ 8.420</strong></div>
+                            <div class="linha-stat"><span>Progresso</span> <strong>67%</strong></div>
+                            <progress value="67" max="100"></progress>
+                        </div>
+                        <div class="botoes-campanha">
+                            <a href="#" class="btn-laranja-solido">Ver campanha &nearr;</a>
+                            <button class="btn-creme">Contribuir &hearts;</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card-campanha">
+                    <div class="img-campanha bg-camp-2"></div>
+                    <div class="conteudo-campanha">
+                        <b class="titulo-campanha">Saúde e atendimento veterinário</b>
+                        <p>Campanha para exames, medicamentos e procedimentos veterinários essenciais para os animais.
+                        </p>
+                        <div class="stats-campanha">
+                            <div class="linha-stat"><span>Meta</span> <strong>R$ 9.800</strong></div>
+                            <div class="linha-stat"><span>Arrecadado</span> <strong>R$ 5.990</strong></div>
+                            <div class="linha-stat"><span>Progresso</span> <strong>61%</strong></div>
+                            <progress value="61" max="100"></progress>
+                        </div>
+                        <div class="botoes-campanha">
+                            <a href="#" class="btn-laranja-solido">Ver campanha &nearr;</a>
+                            <button class="btn-creme">Contribuir &hearts;</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--OITAVA SESSÃO "DOAÇÕES"-->
+        <section class="seccao-doacoes-progresso" id="doacoes">
+            <div class="bloco-doacoes creme">
+                <div class="metade-esq">
+                    <div class="subtitulo-padrao subtitulo-laranja"><span></span> DOAÇÕES</div>
+                    <h2>Escolha como contribuir.</h2>
+                    <p>Faça uma contribuição para apoiar as necessidades do Abrigo São Francisco.</p>
+                </div>
+                <div class="metade-dir form-doacao card-branco-sombra">
+                    <p class="label">Escolha um valor</p>
+                    <div class="opcoes-valor">
+                        <button class="btn-valor">R$ 25</button>
+                        <button class="btn-valor ativo">R$ 50</button>
+                        <button class="btn-valor">R$ 100</button>
+                        <button class="btn-valor">R$ 200</button>
+                        <button class="btn-valor">Outro valor</button>
+                    </div>
+                    <p class="label mt-20">Tipo de contribuição</p>
+                    <div class="opcoes-tipo">
+                        <label class="radio-box ativo"><input type="radio" name="tipo" checked> Doação única</label>
+                        <label class="radio-box"><input type="radio" name="tipo"> Doação recorrente</label>
+                    </div>
+                    <button class="btn-laranja-solido mt-20 w-100">Continuar para doação &nearr;</button>
+                </div>
+            </div>
+        </section>
+        <!--NONA SESSÃO "ACOMPANHE O PROCESSO"-->
+        <section class="seccao-progresso-detalhe escuro">
+            <div class="cabecalho-padrao">
+                <div class="subtitulo-padrao subtitulo-laranja"><span></span> ACOMPANHE O PROGRESSO</div>
+                <h2 class="texto-branco">Veja como as campanhas estão avançando.</h2>
+                <p class="texto-cinza-claro">Acompanhe a evolução das campanhas por meio das metas e dos valores
+                    arrecadados.</p>
+            </div>
+
+            <div class="card-indicadores">
+                <b><span class="titulo-indicadores">CAMPANHA:</span> Reciclagem que ajuda</b>
+
+                <div class="grid-indicadores">
+                    <div class="indicador-item">
+                        <span class="indicador-label">Meta</span>
+                        <strong class="indicador-valor">R$ [XX.XXX]</strong>
+                    </div>
+                    <div class="indicador-item">
+                        <span class="indicador-label">Arrecadado</span>
+                        <strong class="indicador-valor">R$ [XX.XXX]</strong>
+                    </div>
+                    <div class="indicador-item">
+                        <span class="indicador-label">Progresso</span>
+                        <strong class="indicador-valor">[XX]%</strong>
+                    </div>
+                    <div class="indicador-item">
+                        <span class="indicador-label">Contribuições</span>
+                        <strong class="indicador-valor">[XX]</strong>
+                    </div>
+                </div>
+
+                <div class="barra-progresso-container">
+                    <div class="barra-fundo">
+                        <div class="barra-preenchimento" style="width: 15%;"></div>
+                    </div>
+                </div>
+
+                <div class="rodape-indicadores">
+                    <span class="texto-meta">[XX]% da meta alcançada</span>
+                    <a href="#" class="btn-laranja-solido">
+                        Conhecer campanha
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="7" y1="17" x2="17" y2="7"></line>
+                            <polyline points="7 7 17 7 17 17"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!--DECIMA SESSÃO "TRANSPARÊNCIA E RESULTADOS"-->
+        <section class="seccao-transparencia creme">
+
+            <div class="cabecalho-padrao">
+                <div class="subtitulo-padrao subtitulo-laranja">
+                    <span class="traco"></span> TRANSPARÊNCIA E RESULTADOS
+                </div>
+                <h2>Acompanhe os resultados das ações.</h2>
+                <p>Consulte as informações disponibilizadas pelo Abrigo São Francisco sobre campanhas, recursos e
+                    resultados.</p>
+            </div>
+
+            <div class="lista-cards-transparencia">
+
+
+                <a href="#" class="card-transparencia">
+                    <div class="card-trans-numero">01</div>
+                    <div class="card-trans-conteudo">
+                        <b>Relatórios</b>
+                        <p>Acompanhe informações e resultados das ações realizadas.</p>
+                    </div>
+                    <span class="card-trans-link">Ver relatórios &rarr;</span>
+                </a>
+
+
+                <a href="#" class="card-transparencia">
+                    <div class="card-trans-numero">02</div>
+                    <div class="card-trans-conteudo">
+                        <b>Prestação de contas</b>
+                        <p>Consulte informações sobre a utilização dos recursos.</p>
+                    </div>
+                    <span class="card-trans-link">Ver prestação de contas &rarr;</span>
+                </a>
+
+
+                <a href="#" class="card-transparencia">
+                    <div class="card-trans-numero">03</div>
+                    <div class="card-trans-conteudo">
+                        <b>Documentos</b>
+                        <p>Acesse os documentos disponibilizados pelo Abrigo.</p>
+                    </div>
+                    <span class="card-trans-link">Ver documentos &rarr;</span>
+                </a>
+
+
+                <a href="#" class="card-transparencia">
+                    <div class="card-trans-numero">04</div>
+                    <div class="card-trans-conteudo">
+                        <b>Resultados das campanhas</b>
+                        <p>Confira os resultados das campanhas realizadas.</p>
+                    </div>
+                    <span class="card-trans-link">Ver campanhas &rarr;</span>
+                </a>
+
+            </div>
+        </section>
+
+        <!--DECIMA PRIMEIRA SESSÃO "PERGUNTAS FRENQUENTES"-->
+        <section class="seccao-faq escuro">
+            <div class="subtitulo-padrao subtitulo-laranja"><span></span> PERGUNTAS FREQUENTES</div>
+            <h2 class="texto-branco mb-40">Ficou com alguma dúvida?</h2>
+
+            <div class="lista-faq">
+
+                <div class="faq-item aberto">
+                    <div class="faq-pergunta">
+                        <b>Como posso me inscrever para uma oportunidade de voluntariado?</b>
+                        <span class="icone-faq">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Consulte as oportunidades disponíveis, escolha aquela que deseja participar e envie sua
+                            inscrição pelo formulário correspondente.</p>
+                    </div>
+                </div>
+
+
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <b>Como funciona a seleção dos voluntários?</b>
+                        <span class="icone-faq">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>As inscrições são analisadas pela nossa equipa de acordo com o perfil necessário para cada
+                            atividade.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <b>Onde acompanho minha participação?</b>
+                        <span class="icone-faq">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Todo o seu histórico fica registado na Área do Voluntário.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <b>Onde encontro meus certificados?</b>
+                        <span class="icone-faq">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Os certificados ficam disponíveis para download na secção "Meus certificados" da Área do
+                            Voluntário.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-pergunta">
+                        <b>Como posso fazer uma doação?</b>
+                        <span class="icone-faq">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="12" y1="5" x2="12" y2="19"></line>
+                                <line x1="5" y1="12" x2="19" y2="12"></line>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="faq-resposta">
+                        <p>Basta aceder à secção "Doações" nesta mesma página e escolher o valor e método preferido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--DECIMA PRIMEIRA SEGUNDA "ESCOLHA COMO PARTICIPAR"-->
+        <section class="seccao-cta-participar laranja">
+            <div class="cta-texto">
+                <span class="cta-subtitulo">Escolha como participar.</span>
+                <h2>Seja por meio do voluntariado, de uma contribuição ou do apoio a uma campanha, encontre uma forma de
+                    participar dos projetos do Abrigo São Francisco.</h2>
+            </div>
+            <div class="cta-botoes">
+                <a href="#" class="btn-escuro">
+                    Ver oportunidades
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+                <a href="#" class="btn-creme">
+                    Ver campanhas
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="7" y1="17" x2="17" y2="7"></line>
+                        <polyline points="7 7 17 7 17 17"></polyline>
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="rodape-site">
+        <div class="conteudo-rodape">
+
+
+            <div class="coluna-marca">
+                <div class="logo-rodape">
+                    <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco"
+                        width="50" height="50" loading="lazy">
+                </div>
+                <h3>Abrigo<br><span>São Francisco</span></h3>
+                <p>Acolhimento, proteção, cuidado<br>e adoção responsável.</p>
+            </div>
+
+            <div class="colunas-links">
+
+                <div class="coluna-nav">
+                    <h4>INSTITUCIONAL</h4>
+                    <ul>
+                        <li><a href="#">Nossa história</a></li>
+                        <li><a href="#">Transparência</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </div>
+
+                <div class="coluna-nav">
+                    <h4>PARTICIPE</h4>
+                    <ul>
+                        <li><a href="#">Adote</a></li>
+                        <li><a href="#">Doe</a></li>
+                        <li><a href="projects.html">Seja voluntário</a></li>
+                    </ul>
+                </div>
+
+                <div class="coluna-nav">
+                    <h4>ENCONTRE</h4>
+                    <ul>
+                        <li><a href="#">Endereço e horários</a></li>
+                        <li><a href="#">Instagram</a></li>
+                        <li><a href="#">E-mail</a></li>
+                    </ul>
+                </div>
+
+            </div>
         </div>
-    </div>
-</section>
 
 
-<section class="seccao-doacoes-progresso" id="doacoes">
-    <div class="bloco-doacoes creme">
-        <div class="metade-esq">
-            <div class="subtitulo-padrao subtitulo-laranja"><span></span> DOAÇÕES</div>
-            <h2>Escolha como contribuir.</h2>
-            <p>Faça uma contribuição para apoiar as necessidades do Abrigo São Francisco.</p>
-        </div>
-        <div class="metade-dir form-doacao card-branco-sombra">
-            <p class="label">Escolha um valor</p>
-            <div class="opcoes-valor">
-                <button class="btn-valor">R$ 25</button>
-                <button class="btn-valor ativo">R$ 50</button>
-                <button class="btn-valor">R$ 100</button>
-                <button class="btn-valor">R$ 200</button>
-                <button class="btn-valor">Outro valor</button>
-            </div>
-            <p class="label mt-20">Tipo de contribuição</p>
-            <div class="opcoes-tipo">
-                <label class="radio-box ativo"><input type="radio" name="tipo" checked> Doação única</label>
-                <label class="radio-box"><input type="radio" name="tipo"> Doação recorrente</label>
-            </div>
-            <button class="btn-laranja-solido mt-20 w-100">Continuar para doação &nearr;</button>
-        </div>
-    </div>
-</section>
+        <div class="linha-divisoria-rodape"></div>
 
 
-<section class="seccao-progresso-detalhe escuro">
-    <div class="cabecalho-padrao">
-        <div class="subtitulo-padrao subtitulo-laranja"><span></span> ACOMPANHE O PROGRESSO</div>
-        <h2 class="texto-branco">Veja como as campanhas estão avançando.</h2>
-        <p class="texto-cinza-claro">Acompanhe a evolução das campanhas por meio das metas e dos valores arrecadados.</p>
-    </div>
+        <div class="rodape-inferior">
+            <p>&copy; Abrigo São Francisco &middot; Cuidado que transforma.</p>
 
-    <div class="card-indicadores">
-        <h4 class="titulo-indicadores">INDICADORES</h4>
-        
-        <div class="grid-indicadores">
-            <div class="indicador-item">
-                <span class="indicador-label">Meta</span>
-                <strong class="indicador-valor">R$ [XX.XXX]</strong>
-            </div>
-            <div class="indicador-item">
-                <span class="indicador-label">Arrecadado</span>
-                <strong class="indicador-valor">R$ [XX.XXX]</strong>
-            </div>
-            <div class="indicador-item">
-                <span class="indicador-label">Progresso</span>
-                <strong class="indicador-valor">[XX]%</strong>
-            </div>
-            <div class="indicador-item">
-                <span class="indicador-label">Contribuições</span>
-                <strong class="indicador-valor">[XX]</strong>
+            <div class="links-inferiores">
+                <a href="#">Privacidade</a>
+                <a href="#">Termos</a>
+                <a href="#" class="btn-voltar-topo" aria-label="Voltar ao topo">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="19" x2="12" y2="5"></line>
+                        <polyline points="5 12 12 5 19 12"></polyline>
+                    </svg>
+                </a>
             </div>
         </div>
-
-        <div class="barra-progresso-container">
-            <div class="barra-fundo">
-                <div class="barra-preenchimento" style="width: 15%;"></div>
-            </div>
-        </div>
-
-        <div class="rodape-indicadores">
-            <span class="texto-meta">[XX]% da meta alcançada</span>
-            <a href="#" class="btn-laranja-solido">
-                Conhecer campanha
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-            </a>
-        </div>
-    </div>
-</section>
-
-<section class="seccao-transparencia creme">
-    
-    <div class="cabecalho-padrao">
-        <div class="subtitulo-padrao subtitulo-laranja">
-            <span class="traco"></span> TRANSPARÊNCIA E RESULTADOS
-        </div>
-        <h2>Acompanhe os resultados das ações.</h2>
-        <p>Consulte as informações disponibilizadas pelo Abrigo São Francisco sobre campanhas, recursos e resultados.</p>
-    </div>
-
-    <div class="lista-cards-transparencia">
-        
-
-        <a href="#" class="card-transparencia">
-            <div class="card-trans-numero">01</div>
-            <div class="card-trans-conteudo">
-                <h4>Relatórios</h4>
-                <p>Acompanhe informações e resultados das ações realizadas.</p>
-            </div>
-            <span class="card-trans-link">Ver relatórios &rarr;</span>
-        </a>
-
-
-        <a href="#" class="card-transparencia">
-            <div class="card-trans-numero">02</div>
-            <div class="card-trans-conteudo">
-                <h4>Prestação de contas</h4>
-                <p>Consulte informações sobre a utilização dos recursos.</p>
-            </div>
-            <span class="card-trans-link">Ver prestação de contas &rarr;</span>
-        </a>
-
-
-        <a href="#" class="card-transparencia">
-            <div class="card-trans-numero">03</div>
-            <div class="card-trans-conteudo">
-                <h4>Documentos</h4>
-                <p>Acesse os documentos disponibilizados pelo Abrigo.</p>
-            </div>
-            <span class="card-trans-link">Ver documentos &rarr;</span>
-        </a>
-
-
-        <a href="#" class="card-transparencia">
-            <div class="card-trans-numero">04</div>
-            <div class="card-trans-conteudo">
-                <h4>Resultados das campanhas</h4>
-                <p>Confira os resultados das campanhas realizadas.</p>
-            </div>
-            <span class="card-trans-link">Ver campanhas &rarr;</span>
-        </a>
-
-    </div>
-</section>
-
-
-<section class="seccao-faq escuro">
-    <div class="subtitulo-padrao subtitulo-laranja"><span></span> PERGUNTAS FREQUENTES</div>
-    <h2 class="texto-branco mb-40">Ficou com alguma dúvida?</h2>
-    
-    <div class="lista-faq">
-
-        <div class="faq-item aberto">
-            <div class="faq-pergunta">
-                <h4>Como posso me inscrever para uma oportunidade de voluntariado?</h4>
-                <span class="icone-faq">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </span>
-            </div>
-            <div class="faq-resposta">
-                <p>Consulte as oportunidades disponíveis, escolha aquela que deseja participar e envie sua inscrição pelo formulário correspondente.</p>
-            </div>
-        </div>
-
-
-        <div class="faq-item">
-            <div class="faq-pergunta">
-                <h4>Como funciona a seleção dos voluntários?</h4>
-                <span class="icone-faq">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </span>
-            </div>
-            <div class="faq-resposta"><p>As inscrições são analisadas pela nossa equipa de acordo com o perfil necessário para cada atividade.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-pergunta">
-                <h4>Onde acompanho minha participação?</h4>
-                <span class="icone-faq">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </span>
-            </div>
-            <div class="faq-resposta"><p>Todo o seu histórico fica registado na Área do Voluntário.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-pergunta">
-                <h4>Onde encontro meus certificados?</h4>
-                <span class="icone-faq">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </span>
-            </div>
-            <div class="faq-resposta"><p>Os certificados ficam disponíveis para download na secção "Meus certificados" da Área do Voluntário.</p></div>
-        </div>
-
-        <div class="faq-item">
-            <div class="faq-pergunta">
-                <h4>Como posso fazer uma doação?</h4>
-                <span class="icone-faq">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg>
-                </span>
-            </div>
-            <div class="faq-resposta"><p>Basta aceder à secção "Doações" nesta mesma página e escolher o valor e método preferido.</p></div>
-        </div>
-    </div>
-</section>
-
-
-<section class="seccao-cta-participar laranja">
-    <div class="cta-texto">
-        <span class="cta-subtitulo">Escolha como participar.</span>
-        <h2>Seja por meio do voluntariado, de uma contribuição ou do apoio a uma campanha, encontre uma forma de participar dos projetos do Abrigo São Francisco.</h2>
-    </div>
-    <div class="cta-botoes">
-        <a href="#" class="btn-escuro">
-            Ver oportunidades 
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-        <a href="#" class="btn-creme">
-            Ver campanhas 
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
-        </a>
-    </div>
-</section>
-</main>
-
-
-<footer class="rodape-site">
-    <div class="conteudo-rodape">
-        
-
-        <div class="coluna-marca">
-            <div class="logo-rodape">
-                <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco">
-            </div>
-            <h3>Abrigo<br><span>São Francisco</span></h3>
-            <p>Acolhimento, proteção, cuidado<br>e adoção responsável.</p>
-        </div>
-
-        <div class="colunas-links">
-            
-            <div class="coluna-nav">
-                <h4>INSTITUCIONAL</h4>
-                <ul>
-                    <li><a href="#">Nossa história</a></li>
-                    <li><a href="#">Transparência</a></li>
-                    <li><a href="#">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="coluna-nav">
-                <h4>PARTICIPE</h4>
-                <ul>
-                    <li><a href="#">Adote</a></li>
-                    <li><a href="#">Doe</a></li>
-                    <li><a href="projects.html">Seja voluntário</a></li>
-                </ul>
-            </div>
-
-            <div class="coluna-nav">
-                <h4>ENCONTRE</h4>
-                <ul>
-                    <li><a href="#">Endereço e horários</a></li>
-                    <li><a href="#">Instagram</a></li>
-                    <li><a href="#">E-mail</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-
-    <div class="linha-divisoria-rodape"></div>
-
-
-    <div class="rodape-inferior">
-        <p>&copy; Abrigo São Francisco &middot; Cuidado que transforma.</p>
-        
-        <div class="links-inferiores">
-            <a href="#">Privacidade</a>
-            <a href="#">Termos</a>
-            <a href="#" class="btn-voltar-topo" aria-label="Voltar ao topo">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="19" x2="12" y2="5"></line><polyline points="5 12 12 5 19 12"></polyline></svg>
-            </a>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>
