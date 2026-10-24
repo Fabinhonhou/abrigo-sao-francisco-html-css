@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,17 +8,20 @@
     <link rel="stylesheet" href="projects.css" type="text/css">
     <script src="script.js" defer></script>
 </head>
+
 <body class="creme">
 
     <header class="nav-bar">
         <div class="logo-container">
-            <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco">
+            <img src="imagens/logotipo_abrogoSF.svg" class="logotipo" alt="Logo do Abrigo São Francisco" width="50"
+                height="50" loading="eager">
             <p class="escritalogo">
                 <strong>Abrigo</strong>
                 <span>São Francisco</span>
             </p>
         </div>
-        <div class="menu-toggle" onclick="document.querySelector('.navegacao').classList.toggle('ativa'); this.classList.toggle('ativa');">
+        <div class="menu-toggle"
+            onclick="document.querySelector('.navegacao').classList.toggle('ativa'); this.classList.toggle('ativa');">
             <span></span>
             <span></span>
             <span></span>
@@ -35,7 +39,7 @@
 
 
     <main class="seccao-cadastro">
-        
+
         <div class="cabecalho-cadastro">
             <h1>Faça parte do recomeço</h1>
             <p>Preencha seus dados para se cadastrar como voluntário do Abrigo São Francisco.</p>
@@ -45,7 +49,7 @@
 
             <fieldset class="grupo-campos">
                 <legend>Dados Pessoais</legend>
-                
+
                 <div class="grid-form">
                     <div class="campo-form col-total">
                         <label for="nome">Nome Completo *</label>
@@ -56,7 +60,7 @@
                         <label for="email">E-mail *</label>
                         <input type="email" id="email" name="email" placeholder="seu@email.com" required>
                     </div>
-                    
+
                     <div class="campo-form">
                         <label for="nascimento">Data de Nascimento *</label>
                         <input type="date" id="nascimento" name="nascimento" required>
@@ -64,12 +68,14 @@
 
                     <div class="campo-form">
                         <label for="cpf">CPF *</label>
-                        <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" title="Formato: 000.000.000-00" required>
+                        <input type="text" id="cpf" name="cpf" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                            placeholder="000.000.000-00" title="Formato: 000.000.000-00" required>
                     </div>
-                    
+
                     <div class="campo-form">
                         <label for="telefone">Telefone *</label>
-                        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{5}-\d{4}" placeholder="(00) 00000-0000" title="Formato: (00) 00000-0000" required>
+                        <input type="tel" id="telefone" name="telefone" pattern="\(\d{2}\)\s\d{5}-\d{4}"
+                            placeholder="(00) 00000-0000" title="Formato: (00) 00000-0000" required>
                     </div>
                 </div>
             </fieldset>
@@ -77,13 +83,14 @@
 
             <fieldset class="grupo-campos">
                 <legend>Endereço</legend>
-                
+
                 <div class="grid-form">
                     <div class="campo-form">
                         <label for="cep">CEP *</label>
-                        <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000" title="Formato: 00000-000" required>
+                        <input type="text" id="cep" name="cep" pattern="\d{5}-\d{3}" placeholder="00000-000"
+                            title="Formato: 00000-000" required>
                     </div>
-                    
+
                     <div class="campo-form">
                         <label for="cidade">Cidade *</label>
                         <input type="text" id="cidade" name="cidade" placeholder="Sua Cidade" required>
@@ -91,9 +98,10 @@
 
                     <div class="campo-form">
                         <label for="endereco">Endereço (Rua, Número, Bairro) *</label>
-                        <input type="text" id="endereco" name="endereco" placeholder="Ex. Rua tiradentes, 123 - Guaianases" required>
+                        <input type="text" id="endereco" name="endereco"
+                            placeholder="Ex. Rua tiradentes, 123 - Guaianases" required>
                     </div>
-                    
+
                     <div class="campo-form">
                         <label for="estado">Estado *</label>
                         <select id="estado" name="estado" required>
@@ -116,4 +124,5 @@
     </main>
 
 </body>
+
 </html>
