@@ -338,16 +338,10 @@ p  {
     background-image: url('imagens/foto_1_secao_apoio.jpeg');
 }
 .bg-img-voluntariado-2  {
-    background-image: url('imagens/foto_5_secao_apoio.jpeg');
+    background-image: url('imagens/foto_1_secao_oportunidades.jpeg');
 }
 .bg-img-voluntariado-3  {
-    background-image: url('imagens/foto_homem_segurando_cachorro.jpeg');
-}
-.bg-camp-1  {
-    background-image: url('imagens/campanha_1.jpeg');
-}
-.bg-camp-2  {
-    background-image: url('imagens/campanha_2.jpeg');
+    background-image: url('imagens/foto_2_secao_aportunidades.jpeg');
 }
 .nav-bar  {
     width: 100%;
@@ -2039,8 +2033,17 @@ p  {
     width: 100%;
     height: 300px;
     background-size: cover;
-    background-position: 10% 10%;
+    overflow: hidden;
 }
+
+.img-campanha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 15%;
+    display: block;
+}
+
 .conteudo-campanha  {
     padding: 40px;
 }
