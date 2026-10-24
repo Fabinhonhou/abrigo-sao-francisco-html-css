@@ -421,13 +421,13 @@ main  {
     z-index: 1;
 }
 .bg-card-1  {
-    background-image: url('imagens/foto_1_secao_apoio.jpeg');
+    background-image: url('../imagens/foto_1_secao_apoio.jpeg');
 }
 .bg-card-2  {
-    background-image: url('imagens/foto_5_secao_apoio.jpeg');
+    background-image: url('../imagens/foto_5_secao_apoio.jpeg');
 }
 .bg-card-3  {
-    background-image: url('imagens/foto_homem_segurando_cachorro.jpeg');
+    background-image: url('../imagens/foto_homem_segurando_cachorro.jpeg');
 }
 .conteudo-card  {
     position: relative;

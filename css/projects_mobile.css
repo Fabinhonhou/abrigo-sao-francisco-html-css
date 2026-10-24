@@ -209,13 +209,13 @@ p  {
 }
 
 .bg-img-voluntariado-1  {
-    background-image: url('imagens/foto_1_secao_apoio.jpeg');
+    background-image: url('../imagens/foto_1_secao_apoio.jpeg');
 }
 .bg-img-voluntariado-2  {
-    background-image: url('imagens/foto_1_secao_oportunidades.jpeg');
+    background-image: url('../imagens/foto_1_secao_oportunidades.jpeg');
 }
 .bg-img-voluntariado-3  {
-    background-image: url('imagens/foto_2_secao_aportunidades.jpeg');
+    background-image: url('../imagens/foto_2_secao_aportunidades.jpeg');
 }
 .nav-bar  {
     width: 100%;
